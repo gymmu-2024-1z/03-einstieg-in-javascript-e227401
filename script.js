@@ -52,10 +52,14 @@ export function aufgabe02(args) {
   // läut Zeichen für Zeichen über den ganzen Text.
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    // Hänge das aktuelle Zeichen doppelt an
-    result.push(currentElement)
-    result.push(currentElement)
+    const upperCase = currentElement.toUpperCase()
+    result.push(upperCase)
   }
   return result.join("")
 }
+
 linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
+
+export function aufgabe03(args) {
+  const input = args
+}
