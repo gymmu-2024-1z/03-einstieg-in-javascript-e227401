@@ -62,4 +62,17 @@ linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
 
 export function aufgabe03(args) {
   const input = args
+
+  let count = 0
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      // Zähle alle 'e's durch
+      count = count + 1
+    }
+  }
+  return count
 }
+linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
+
+export function aufgabe05(args) {}
