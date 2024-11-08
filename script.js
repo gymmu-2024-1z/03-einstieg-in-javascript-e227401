@@ -87,8 +87,36 @@ export function aufgabe05(args) {
     } else if (currentElement === " ") {
     } else if (currentElement === upperCaseLetter) {
       hasUpperCaseLetter = true
+      //Prüfe den Text auf Grossbuchstaben.
     }
   }
   return hasUpperCaseLetter
 }
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
+
+export function aufgabe06(args) {
+  const input = args
+  const result = []
+
+  // Erstelle eine Variable, die sagt uns, ob ein Sonderzeichen vorkommt
+  let istSonderzeichen = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Wandle in grossbuchstabe um
+    const upperCaseLetter = currentElement.toUpperCase()
+    // Wandle wieder in Kleinbuchstabe um
+    const lowerCaseLetter = upperCaseLetter.toLowerCase()
+
+    // Prüfe ob lowerCaseLetter gleich upperCaseLetter ist
+    if (lowerCaseLetter === upperCaseLetter) {
+      istSonderzeichen = true
+    }
+  }
+
+  // Gib zurück ob es ein Sonderzeichen hat
+  return istSonderzeichen
+}
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
+export function aufgabe07(args) {}
