@@ -159,3 +159,24 @@ export function aufgabe08(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
+
+export function aufgabe09(args) {
+  const input = args
+  const result = []
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    count = count + 1
+  }
+
+  // IstEingabe= 6 Zeichen
+  if (count === 6) {
+    // Gebe die Eingabe zurueck
+    return true
+  } else {
+    return false
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
