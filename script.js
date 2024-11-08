@@ -119,4 +119,26 @@ export function aufgabe06(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
 
-export function aufgabe07(args) {}
+export function aufgabe07(args) {
+  const input = args
+  const result = []
+  // Erstellle eine Variable, die sagt uns, ob ein 'und' vorkommt
+  let istUnd = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (
+      currentElement === "u" &&
+      input[i + 1] === "n" &&
+      input[i + 2] === "d"
+    ) {
+      istUnd = true
+    }
+  }
+  // Gib zurück ob es ein 'und' hat
+  return istUnd
+}
+linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
+
+export function aufgabe08(args) {}
