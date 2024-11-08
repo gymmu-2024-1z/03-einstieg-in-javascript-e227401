@@ -180,3 +180,20 @@ export function aufgabe09(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
+
+export function aufgabe12(args) {
+  const input = args
+  const result = []
+  // istPosition= erstes "e"
+  let istPosition = -1
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      istPosition = i
+      return istPosition
+    }
+  }
+  // Bestimme Position des ersten "e"s im Text
+  return istPosition
+}
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
