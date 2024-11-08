@@ -141,4 +141,21 @@ export function aufgabe07(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe07]", aufgabe07)
 
-export function aufgabe08(args) {}
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+  // Erstelle eine Variable, die uns alle "e"s anzeigt
+  let eCounter = 0
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      // Schreibe den ganzen text und setze ein buchstaben nach dem anderen und ersetze alle "e"s mit 3
+      result.push("3")
+    } else {
+      result.push(currentElement)
+    }
+  }
+
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
