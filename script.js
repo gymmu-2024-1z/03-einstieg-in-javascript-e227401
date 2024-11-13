@@ -215,4 +215,18 @@ export function aufgabe13(args) {
 
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
 
-export function aufgabe14(args) {}
+export function aufgabe14(args) {
+  const input = args
+  const result = []
+  // istPosition= drittes "e"
+  let istPosition = -1
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      istPosition = i
+    }
+  }
+  // Bestimme die Position des dritten "e"s im Text
+  return istPosition
+}
+linkupExerciseHandler('[data-click="aufgabe14"]', aufgabe14)
