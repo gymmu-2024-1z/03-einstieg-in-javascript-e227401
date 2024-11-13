@@ -230,3 +230,21 @@ export function aufgabe14(args) {
   return istPosition
 }
 linkupExerciseHandler('[data-click="aufgabe14"]', aufgabe14)
+
+export function aufgabe15(args) {
+  const input = args
+  const result = []
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    // Wenn du ein leerzeichen findest, dann gib result zurück und breche ab
+    if (currentElement === " ") {
+      return result.join("")
+    }
+
+    // hänge das zeichen an result an
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+linkupExerciseHandler('[data-click="aufgabe15"]', aufgabe15)
