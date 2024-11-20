@@ -283,3 +283,17 @@ export function aufgabe17(args) {
   const result = []
 }
 linkupExerciseHandler('[data-click="aufgabe17"]', aufgabe17)
+
+export function aufgabe19(args) {
+  const input = args
+  const result = []
+  // verdopple alle zeichen
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+    result.push(currentElement)
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler('[data-click="aufgabe19"]', aufgabe19)
