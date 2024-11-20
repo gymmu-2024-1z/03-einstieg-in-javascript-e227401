@@ -297,3 +297,23 @@ export function aufgabe19(args) {
 }
 
 linkupExerciseHandler('[data-click="aufgabe19"]', aufgabe19)
+
+export function aufgabe20(args) {
+  const input = args
+  const result = []
+
+
+  for (let i = 0; i < input.length; i++)
+  // wenn du ein '.' findest
+ const currentElement = input[i]
+    if (currentElement === ".") {
+    // teste nun, ob ein Leerschlag dahinter ist
+    if (input[i + 1] === " ") {
+      // wenn ja, dann gib result zurueck und breche ab
+      return result.join("")
+    }
+  }
+
+
+}
+linkupExerciseHandler('[data-click="aufgabe20"]', aufgabe20)
