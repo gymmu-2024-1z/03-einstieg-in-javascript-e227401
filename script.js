@@ -248,3 +248,32 @@ export function aufgabe15(args) {
   return result.join("")
 }
 linkupExerciseHandler('[data-click="aufgabe15"]', aufgabe15)
+
+export function aufgabe16(args) {
+  const input = args
+  const result1 = []
+  const result2 = []
+
+  // istDollarzeichen= false
+  let istDollarzeichen = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "$") {
+      istDollarzeichen = true
+    }
+
+    // Wenn dollarzeichen falsch ist, dann hänge currentElement an result1 an
+    if (istDollarzeichen === false) {
+      result1.push(currentElement)
+    }
+    // Wenn dollarzeichen richtig ist, dann hange currentElement an result2 an
+    if (istDollarzeichen === true) {
+      result2.push(currentElement)
+    }
+  }
+  // Gib result1 und result2 zurueck
+  return [result1.join(""), result2.join("")]
+}
+
+linkupExerciseHandler('[data-click="aufgabe16"]', aufgabe16)
