@@ -338,3 +338,30 @@ export function aufgabe21(args) {
   return result.reverse().join("")
 }
 linkupExerciseHandler('[data-click="aufgabe21"]', aufgabe21)
+
+export function aufgabe22(args) {
+  const input = args
+  const result = []
+
+  // istK= false
+  let istK = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "k") {
+      istK = true
+    }
+    // Wenn istK false ist, dann gib result1 zurueck
+    if (istK === false) {
+      // Hänge ein Unterstrich an
+      result.push("_")
+    }
+    // Wenn istK true ist, dann hänge aktuelles Zeichen an
+    if (istK === true) {
+      result.push(currentElement)
+    }
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler('[data-click="aufgabe22"]', aufgabe22)
