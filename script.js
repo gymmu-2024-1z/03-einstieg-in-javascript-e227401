@@ -302,18 +302,25 @@ export function aufgabe20(args) {
   const input = args
   const result = []
 
-
-  for (let i = 0; i < input.length; i++)
-  // wenn du ein '.' findest
- const currentElement = input[i]
+  for (
+    let i = 0;
+    i < input.length;
+    i++ // Finde alle punkte )
+  ) {
+    const currentElement = input[i]
     if (currentElement === ".") {
-    // teste nun, ob ein Leerschlag dahinter ist
-    if (input[i + 1] === " ") {
-      // wenn ja, dann gib result zurueck und breche ab
-      return result.join("")
+      // teste nun, ob ein Leerschlag dahinter ist
+      if (input[i + 1] === " ") {
+        // ist okay suche weiter
+      } else {
+        // Gibt false zurueck
+        return false
+      }
+      // Erstelle hinter jeden Punkt ein Leerschlag
+      result.push(currentElement)
+      result.push(" ")
     }
-  }
-
-
+  } //returne true
+  return true
 }
 linkupExerciseHandler('[data-click="aufgabe20"]', aufgabe20)
