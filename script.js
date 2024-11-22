@@ -365,3 +365,22 @@ export function aufgabe22(args) {
 }
 
 linkupExerciseHandler('[data-click="aufgabe22"]', aufgabe22)
+
+export function aufgabe23(args) {
+  const input = args
+  const result = []
+  //Speichere das erste Zeichen
+  const firstElement = input[0]
+  // Hänge das erste Zeichen vor und am schluss der Ausgabe an
+  result.push(firstElement)
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    // Hänge aktuelles Zeichen an
+    result.push(currentElement)
+  }
+  // Hänge das erste Zeichen ganz am Schluss der Ausgabe an
+  result.push(firstElement)
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
