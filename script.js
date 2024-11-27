@@ -385,6 +385,13 @@ export function aufgabe23(args) {
 
 linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
 
+export function aufgabe24(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {}
+}
+
 export function aufgabe26(args) {
   const input = args
   const result = []
@@ -410,3 +417,22 @@ export function aufgabe26(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe26]", aufgabe26)
+
+export function aufgabe27(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+
+    if (ascii >= 48 && ascii <= 57) {
+      // Gebe ASCII wert von Zahlen ein, um sie zu erkennen und als true zurueckzugeben
+      return true
+    } else {
+      // Gebe false zurueck
+      return false
+    }
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
