@@ -489,3 +489,23 @@ export function eigeneaufgabe29(args) {
   return result2.join("")
 }
 linkupExerciseHandler("[data-click=eigeneaufgabe29]", eigeneaufgabe29)
+
+export function eigeneaufgabe30(args) {
+  const input = args
+  const result = []
+  // Zähle die Eingabe
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+  // Speichere das letze Zeichen der Eingabe
+
+  const lastElement = result[result.length - 1]
+
+  // Verdopple das letzte Zeichen der Eingabe
+  result.push(lastElement)
+
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=eigeneaufgabe30]", eigeneaufgabe30)

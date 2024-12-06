@@ -155,3 +155,7 @@ Falls ja geben Sie die Summe als Ausgabe aus; sonst Fehlermeldung.
 
 Ersetze alle `i` mit einem `1` und setzen Sie das erst positionierte `1` am
 Anfang der Eingabe.
+
+## Eigene Aufgabe 30
+
+Speichere die Eingabe und verdoppele den letzten Buchstaben.
