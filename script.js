@@ -388,9 +388,24 @@ linkupExerciseHandler("[data-click=aufgabe23]", aufgabe23)
 export function aufgabe24(args) {
   const input = args
   const result = []
+  // Speichere das erste und letzte Zeichen der Eingabe
+  const firstElement = input[0]
+  const lastElement = input[input.length - 1]
 
-  for (let i = 0; i < input.length; i++) {}
+  // Hänge das letzte Zeichen ganz am Anfang der Ausgabe an
+  result.push(lastElement)
+
+  for (let i = 1; i < input.length - 1; i++) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+
+  //Hänge das erste Zeichen am Schluss der Ausgabe an
+  result.push(firstElement)
+  return result.join("")
 }
+
+linkupExerciseHandler("[data-click=aufgabe24]", aufgabe24)
 
 export function aufgabe26(args) {
   const input = args
