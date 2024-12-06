@@ -451,3 +451,41 @@ export function aufgabe27(args) {
   }
 }
 linkupExerciseHandler("[data-click=aufgabe27]", aufgabe27)
+
+export function eigeneaufgabe29(args) {
+  const input = args
+  const result = []
+  // Suche alle `i` in der Eingabe und speichere die ganze Eingabe
+
+  let count1 = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "i") {
+      // Ersetze alle `i` mit einem `1`
+      result.push("1")
+    } else {
+      result.push(currentElement)
+    }
+    // Suche das erst positionierte `1` in der Eingabe
+  }
+
+  const result2 = []
+  for (let i = 0; i < result.length; i++) {
+    const currentElement = result[i]
+    if (currentElement === "1") {
+      count1 = count1 + 1
+      if (count1 === 1) {
+        // Setze das erst positionierte `1` am Anfang der Eingabe
+        result2.unshift(currentElement)
+      } else {
+        result2.push(currentElement)
+      }
+    } else {
+      result2.push(currentElement)
+    }
+  }
+
+  return result2.join("")
+}
+linkupExerciseHandler("[data-click=eigeneaufgabe29]", eigeneaufgabe29)
