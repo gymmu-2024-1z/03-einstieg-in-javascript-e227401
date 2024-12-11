@@ -509,3 +509,31 @@ export function eigeneaufgabe30(args) {
   return result.join("")
 }
 linkupExerciseHandler("[data-click=eigeneaufgabe30]", eigeneaufgabe30)
+
+export function eigeneaufgabe31(args) {
+  const input = args
+  const result = []
+  // istPosition= letztes "j"
+  let istPosition = -1
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement.toLowerCase() === "j") {
+      istPosition = i
+    }
+  }
+  // Bestimme Position des letzen "j"s im Text
+
+  if (istPosition === -1) {
+    return istPosition
+  }
+
+  // Ersetze das letzte "j" mit einem "8"
+
+  result.push(input.slice(0, istPosition))
+  result.push("8")
+  result.push(input.slice(istPosition + 1))
+
+  return result.join("")
+}
+linkupExerciseHandler("[data-click=eigeneaufgabe31]", eigeneaufgabe31)

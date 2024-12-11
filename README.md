@@ -151,11 +151,15 @@ Testen sie, ob eine Eingabe eine Zahl ist.
 Testen Sie, ob in der Eingabe 2 Zahlen von einem Leerzeichen getrennt sind.
 Falls ja geben Sie die Summe als Ausgabe aus; sonst Fehlermeldung.
 
-## Eigene Aufgabe 29
+## EigeneAufgabe 29
 
 Ersetze alle `i` mit einem `1` und setzen Sie das erst positionierte `1` am
 Anfang der Eingabe.
 
-## Eigene Aufgabe 30
+## EigeneAufgabe 30
 
 Speichere die Eingabe und verdoppele den letzten Buchstaben.
+
+## EigeneAufgabe 31
+
+Suche die Position des letzten `j` und ersetze das `j` durch eine `8`.
