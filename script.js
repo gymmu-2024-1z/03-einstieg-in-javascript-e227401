@@ -75,6 +75,54 @@ export function aufgabe03(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
 
+export function aufgabe04(args) {
+  const input = args
+  const result = []
+  // Filtere den Text der Eingabe so, dass nur noch die Buchstaben und Leerzeichen übrig bleiben.
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+
+    if (ascii >= 65 && ascii <= 90) {
+      // Gebe ASCII wert von Grossbuchstaben ein, um sie zu erkennen und als true zurueckzugeben
+      result.push(currentElement)
+    } else if (ascii >= 97 && ascii <= 122) {
+      // Gebe ASCII wert von Kleinbuchstaben ein, um sie zu erkennen und als true zurueckzugeben
+      result.push(currentElement)
+    } else if (ascii === 32) {
+      // Gebe ASCII wert von Leerzeichen ein, um sie zu erkennen und als true zurueckzugeben
+      result.push(currentElement)
+    }
+  }
+  // Wenn es jetzt noch mehrere Leerzeichen am Stück gibt, dann müssen diese gefiltert werden
+
+  const result2 = []
+
+  for (let i = 0; i < result.length; i++) {
+    const currentElement = result[i]
+    const nextElement = result[i + 1]
+
+    if (currentElement === " " && nextElement === " ") {
+      // Hier gibt es zwei Leerzeichen hintereinander, das erste wird ignoriert.
+    } else {
+      result2.push(currentElement)
+    }
+  }
+  // Zähle nun die Leerzeichen
+
+  let count = 0
+  for (let i = 0; i < result2.length; i++) {
+    const currentElement = result2[i]
+    if (currentElement === " ") {
+      count++
+    }
+  }
+  // Da es ein Wort mehr wie Leerzeichen gibt gibt es Leerzeichen+1 zurück
+  return count + 1
+}
+linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
+
 export function aufgabe05(args) {
   const input = args
   const result = []
