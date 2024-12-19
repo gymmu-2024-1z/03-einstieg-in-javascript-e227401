@@ -328,8 +328,26 @@ linkupExerciseHandler('[data-click="aufgabe16"]', aufgabe16)
 
 export function aufgabe17(args) {
   const input = args
-  const result = []
+  const totalList = []
+  const currentlist = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    //Wenn jetzt ein Leerzeichen kommt, dann wird alles was bereits vorhanden ist in die totalList geschrieben.
+
+    if (currentElement === " ") {
+      totalList.push(currentlist.join(""))
+      currentlist.length = 0
+    } else {
+      currentlist.push(currentElement)
+    }
+  }
+  //Alles was noch bis zum Ende gelesen wurde, wird in die Liste geschrieben
+  totalList.push(currentlist.join(""))
+  return totalList
 }
+
 linkupExerciseHandler('[data-click="aufgabe17"]', aufgabe17)
 
 export function aufgabe19(args) {
