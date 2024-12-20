@@ -1,3 +1,5 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/SYYUWTQg)
+
 # Einstieg ins Programmieren mit Javascript
 
 Dieses Projekt bietet viele Aufgaben mit automatischen Tests, bei denen Sie das
@@ -132,8 +134,8 @@ Das erste und das letzte Zeichen der Eingabe sollen vertauscht werden.
 
 ## Aufgabe 25
 
-Das mittlere Zeichen der Eingabe soll gelöscht werden. Wenn die Anzahl Zeichen
-gerade ist, sollen die beiden mittleren Zeichen gelöscht werden.
+Zeichen der Eingabe soll gelöscht werden. Wenn die Anzahl Zeichen gerade ist,
+sollen die beiden mittleren ZeiDas mittlerechen gelöscht werden.
 
 ## Aufgabe 26
 
@@ -148,3 +150,16 @@ Testen sie, ob eine Eingabe eine Zahl ist.
 
 Testen Sie, ob in der Eingabe 2 Zahlen von einem Leerzeichen getrennt sind.
 Falls ja geben Sie die Summe als Ausgabe aus; sonst Fehlermeldung.
+
+## EigeneAufgabe 29
+
+Ersetze alle `i` mit einem `1` und setzen Sie das erst positionierte `1` am
+Anfang der Eingabe.
+
+## EigeneAufgabe 30
+
+Speichere die Eingabe und verdoppele den letzten Buchstaben.
+
+## EigeneAufgabe 31
+
+Suche die Position des letzten `j` und ersetze das `j` durch eine `8`.
