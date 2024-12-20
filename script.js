@@ -83,7 +83,7 @@ export function aufgabe04(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     const ascii = currentElement.charCodeAt(0)
-
+    // charCodeAt (0) gibt den Wert ASCII von einem Buchstaben zurueck
     if (ascii >= 65 && ascii <= 90) {
       // Gebe ASCII wert von Grossbuchstaben ein, um sie zu erkennen und als true zurueckzugeben
       result.push(currentElement)
