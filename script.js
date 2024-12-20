@@ -362,7 +362,7 @@ export function aufgabe18(args) {
   // Hier werden ganze Worte in die Liste geschrieben, das ist auch möglich
   result.push("Sie heissen")
 
-  // Die Liste wird so zusammengesetz, dass der Name und das Alter an der richtigen Stelle eingefügt wird.
+  // Die Liste wird so zusammengesetzt, dass der Name und das Alter an der richtigen Stelle eingefügt werden.
   result.push(nameAge[0])
   result.push("und sind")
   result.push(nameAge[1])
@@ -645,3 +645,34 @@ export function bubblesort(args) {
   return result
 }
 linkupExerciseHandler('[data-click="bubblesort"]', bubblesort)
+
+export function selectionsort(args) {
+  const input = args.split("")
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    // Suche das kleinste Element der Eingabe
+    let min = input[i]
+    let minIndex = i
+
+    for (let j = i + 1; j < input.length; j++) {
+      if (input[j] < min) {
+        min = input[j]
+        minIndex = j
+      }
+    }
+    const tmp = input[i]
+    input[i] = min
+    input[minIndex] = tmp
+    // Vertausche das kleinste Element mit dem ersten Element der Eingabe
+    for (let k = i + 1; k < input.length; k++) {
+      if (input[k] < min) {
+        min = input[k]
+        minIndex = k
+      }
+    }
+    result.push(input[i])
+  }
+  return result.join("")
+}
+linkupExerciseHandler('[data-click="selectionsort"]', selectionsort)
